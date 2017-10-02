@@ -1,0 +1,10 @@
+<div class="card">
+  <img class="card-img-top" [src]="data.imageSrc" alt="Card image cap">
+  <div class="card-body">
+    <h4 class="card-title">{{data.title}}</h4>
+    <p class="card-text">{{data.description}}</p>
+    <p class="card-text" *ngIf="data.speaker">Vorbitor: {{data.speaker}}</p>
+    <p class="card-text" *ngIf="data.singer">Muzica: {{data.singer}}</p>
+    <p class="card-text text-right"><small class="text-muted">{{data.dateTime | date}}</small></p>
+  </div>
+</div>

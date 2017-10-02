@@ -4,14 +4,16 @@ import { PageNotFoundComponent } from './page-not-found.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'dashboard', },  
-  { path: 'dashboard', loadChildren: 'app/dashboard/dashboard.module#DashboardModule' },  
+  { path: 'dashboard', loadChildren: 'app/dashboard/dashboard.module#DashboardModule' }, 
+  { path: 'resources', loadChildren: 'app/resources/resources.module#ResourcesModule' },
   { path: '**', pathMatch: 'full', component: PageNotFoundComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })],
   exports: [RouterModule],
-  providers: [   
+  providers: [ 
+      
   ]
 })
 export class AppRoutingModule { }

@@ -9,11 +9,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './page-not-found.component';
 
 import { CoreModule } from './core/core.module';
+import { ResourcesService } from './resources/shared/resources.service';
+import { AngularFireDatabase } from 'angularfire2/database';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent    
   ],
   imports: [
     NgbModule.forRoot(),
@@ -22,7 +24,7 @@ import { CoreModule } from './core/core.module';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase)
   ],
-  providers: [],
+  providers: [ResourcesService, AngularFireDatabase],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

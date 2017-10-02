@@ -2,6 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
+import { AudioCardComponent } from '../resources/shared/audio-card/audio-card.component';
+import { EventCardComponent } from '../resources/shared/event-card/event-card.component';
+
+const COMPONENTS = [
+  AudioCardComponent, EventCardComponent
+];
+
 // imports: imports the module's exports. which are usually
 // declarables(components / directives / pipes) and providers.
 // in our case the FilterTextModule has a provider.
@@ -11,7 +18,7 @@ import { FormsModule } from '@angular/forms';
 // Even so, we import/export both of these because most other modules will import SharedModule and will need them.
 @NgModule({
   imports: [CommonModule, FormsModule],
-  exports: [CommonModule, FormsModule],
-  declarations: [],
+  exports: [CommonModule, FormsModule, COMPONENTS],
+  declarations: [COMPONENTS],
 })
 export class SharedModule { }

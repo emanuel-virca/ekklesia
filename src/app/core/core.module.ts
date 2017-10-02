@@ -5,6 +5,10 @@ import { RouterModule } from '@angular/router';
 
 import { NavComponent } from './nav/nav.component';
 import { throwIfAlreadyLoaded } from './module-import-guard';
+import { NavBottomComponent } from './nav-bottom/nav-bottom.component';
+import { HearthisPlayerModule } from './hearthis-player/hearthis-player.module';
+
+const COMPONENTS = [NavComponent, NavBottomComponent];
 
 // imports: imports the module's exports. which is usually declarables and providers
 // in our case the spinner has no providers.
@@ -12,15 +16,15 @@ import { throwIfAlreadyLoaded } from './module-import-guard';
 // exports: exports modules AND components/directives/pipes that other modules may want to use
 @NgModule({
   imports: [
-    CommonModule, FormsModule, RouterModule    
+    CommonModule, FormsModule, RouterModule, HearthisPlayerModule
   ],
   exports: [
-    CommonModule, FormsModule, RouterModule,
-    [NavComponent]
+    CommonModule, FormsModule, RouterModule, HearthisPlayerModule,
+    COMPONENTS
   ],
-  declarations: [NavComponent],
+  declarations: COMPONENTS,
   providers: [
-    
+
   ]
 })
 export class CoreModule {
