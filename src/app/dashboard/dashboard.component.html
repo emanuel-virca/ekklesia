@@ -2,5 +2,24 @@
   <ng-container *ngFor="let resource of resources | async">
     <app-event-card *ngIf="resource.type==='event'" [data]="resource"></app-event-card>
     <app-audio-card *ngIf="resource.type==='audio'" [data]="resource"></app-audio-card>
-  </ng-container>  
+  </ng-container>
+  <div class="card">
+      <div class="card-body ">
+        <h5 class="card-title">Ascultă și mai multe predici!</h5>
+        <a target="_blank" href="https://hearthis.at/ekklesia/" class="btn btn-outline-secondary">
+          <span class="oi oi-media-play"></span> Ascultă
+        </a> &nbsp;
+      </div>
+    </div>
 </div>
+<ng-template #modalContent let-c="close" let-d="dismiss">
+  <div class="modal-body">
+    <button type="button" class="close" aria-label="Close" (click)="d()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tqaVoVAoGq8?autoplay=1" frameborder="0" gesture="media"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</ng-template>

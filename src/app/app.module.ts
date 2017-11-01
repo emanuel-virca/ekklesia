@@ -11,11 +11,13 @@ import { PageNotFoundComponent } from './page-not-found.component';
 import { CoreModule } from './core/core.module';
 import { ResourcesService } from './resources/shared/resources.service';
 import { AngularFireDatabase } from 'angularfire2/database';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageNotFoundComponent    
+    PageNotFoundComponent,
+    ContactComponent    
   ],
   imports: [
     NgbModule.forRoot(),

@@ -19,7 +19,7 @@ export class HearthisPlayerComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(): void {
-    this.audioPlayerUrl = this.sanitizer.bypassSecurityTrustResourceUrl(`https://hearthis.at/embed/${this.audioId}/transparent/?hcolor=615d5c&color=b6b8b4&style=2&block_size=2&block_space=0&background=0&waveform=0&cover=1&autoplay=0&css=https://ekklesia-1476552990706.firebaseapp.com/assets/hearthis.css`);
+    this.audioPlayerUrl = this.sanitizer.bypassSecurityTrustResourceUrl(`https://hearthis.at/embed/${this.audioId}/transparent/?hcolor=615d5c&color=b6b8b4&style=2&block_size=2&block_space=0&background=0&waveform=0&cover=1&autoplay=1&css=https://ekklesia-1476552990706.firebaseapp.com/assets/hearthis.css`);
   }
 
 }
