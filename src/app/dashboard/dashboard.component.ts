@@ -25,6 +25,6 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.modalService.open(this.modalContent, { size: 'lg' });
+    //this.modalService.open(this.modalContent, { size: 'lg' });
   }
 }
